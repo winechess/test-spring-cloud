@@ -28,7 +28,7 @@ Temporary Items
 *.rar
 hs_err_pid*
 .gradle
-/build/
+build
 gradle-app.setting
 !gradle-wrapper.jar
 .gradletasknamecache
