@@ -3,12 +3,12 @@ version = "0.0.1"
 dependencies {
 
     compile 'org.springframework.cloud:spring-cloud-starter-feign:latest.release'
-    compile 'org.springframework.cloud:spring-cloud-starter-ribbon:latest.release'
-    compile 'org.springframework.cloud:spring-cloud-starter-sleuth:latest.release'
-
-    compile 'org.springframework.cloud:spring-cloud-starter-hystrix:latest.release'
-    compile 'org.springframework.cloud:spring-cloud-netflix-hystrix-stream:latest.release'
-    compile 'org.springframework.cloud:spring-cloud-starter-stream-rabbit:latest.release'
+//    compile 'org.springframework.cloud:spring-cloud-starter-ribbon:latest.release'
+//    compile 'org.springframework.cloud:spring-cloud-starter-sleuth:latest.release'
+//
+//    compile 'org.springframework.cloud:spring-cloud-starter-hystrix:latest.release'
+//    compile 'org.springframework.cloud:spring-cloud-netflix-hystrix-stream:latest.release'
+//    compile 'org.springframework.cloud:spring-cloud-starter-stream-rabbit:latest.release'
 
 //  compile 'org.springframework.cloud:spring-cloud-starter-eureka:latest.release'
 //  compile 'org.springframework.cloud:spring-cloud-starter-hystrix:latest.release'

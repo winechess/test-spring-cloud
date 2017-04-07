@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @SpringBootApplication
 @RestController
 @EnableFeignClients
+@EnableDiscoveryClient
 public class UserServiceApplication {
 
     private AtomicLong hippoCount = new AtomicLong(Long.MAX_VALUE);
@@ -60,3 +62,4 @@ public class UserServiceApplication {
         return hashMap;
     }
 }
+
