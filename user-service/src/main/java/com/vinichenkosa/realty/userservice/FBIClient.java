@@ -9,7 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(url = "localhost:8082", name = "fbi-service")
+@FeignClient(name = "test-service")
 public interface FBIClient {
 
     @RequestMapping(
