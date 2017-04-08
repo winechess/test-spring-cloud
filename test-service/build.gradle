@@ -2,8 +2,8 @@ group = "com.vinichenkosa.realty.testservice"
 version = "0.0.1"
 
 dependencies {
-//
-//  compile 'org.springframework.cloud:spring-cloud-starter-feign:latest.release'
+    compile 'org.springframework.cloud:spring-cloud-starter-consul-all:latest.release'
+    compile 'org.springframework.cloud:spring-cloud-starter-feign:latest.release'
 //  compile 'org.springframework.cloud:spring-cloud-starter-ribbon:latest.release'
 //  compile 'org.springframework.cloud:spring-cloud-starter-sleuth:latest.release'
 //

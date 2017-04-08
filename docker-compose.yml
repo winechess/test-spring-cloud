@@ -18,31 +18,31 @@ services:
     command: "agent -server -bootstrap -client=0.0.0.0 -node=consul-server -ui"
     restart: always
 
-  registrator:
-    image: gliderlabs/registrator
-    container_name: registrator
-    volumes:
-      - "/var/run/docker.sock:/tmp/docker.sock"
-    command: "consul://consul-server:8500"
-    restart: always
+#  registrator:
+#    image: gliderlabs/registrator
+#    container_name: registrator
+#    volumes:
+#      - "/var/run/docker.sock:/tmp/docker.sock"
+#    command: "consul://consul-server:8500"
+#    restart: always
 
   user-service:
     image: user-service
-    container_name: user-service
+#    container_name: user-service
     ports:
-      - "8080:8080"
+      - "8080"
     restart: always
 
   group-service:
     image: group-service
-    container_name: group-service
+#    container_name: group-service
     ports:
       - "8080"
     restart: always
 
   test-service:
     image: test-service
-    container_name: test-service
+#    container_name: test-service
     ports:
       - "8080"
     restart: always

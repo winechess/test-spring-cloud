@@ -3,6 +3,7 @@ package com.vinichenkosa.realty.groupservice;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Slf4j
 @SpringBootApplication
 @RestController
+@EnableDiscoveryClient
 public class GroupServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(GroupServiceApplication.class, args);
