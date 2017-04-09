@@ -6,4 +6,4 @@ spring:
         prefer-ip-address: true
       host: consul-server
   application:
-    name: user-service
+    name: gateway-server

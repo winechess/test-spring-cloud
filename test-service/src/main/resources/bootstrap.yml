@@ -1,2 +1,9 @@
-spring.cloud.consul.host: consul-server
-spring.application.name: test-service
+spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}:${random.value}
+        prefer-ip-address: true
+      host: consul-server
+  application:
+    name: test-service

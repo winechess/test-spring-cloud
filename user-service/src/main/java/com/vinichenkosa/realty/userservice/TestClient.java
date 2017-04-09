@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient(name = "test-service")
-public interface FBIClient {
+public interface TestClient {
 
     @RequestMapping(
             path = "/fink",

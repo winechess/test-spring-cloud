@@ -4,4 +4,5 @@ rootProject.name = "realty"
 include 'group-service'
 include 'user-service'
 include 'test-service'
+include 'gateway-server'
 //## end includes ######
