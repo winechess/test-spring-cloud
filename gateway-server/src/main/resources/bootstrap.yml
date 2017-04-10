@@ -5,5 +5,9 @@ spring:
         instance-id: ${spring.application.name}:${random.value}
         prefer-ip-address: true
       host: consul-server
+    stream:
+      default-binder: rabbit
   application:
     name: gateway-server
+  rabbitmq:
+    host: rabbitmq

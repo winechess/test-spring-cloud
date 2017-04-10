@@ -6,8 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +21,6 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 @EnableFeignClients
 @EnableDiscoveryClient
-@EnableHystrix
 public class UserServiceApplication {
 
     private AtomicLong hippoCount = new AtomicLong(Long.MAX_VALUE);
@@ -40,9 +37,9 @@ public class UserServiceApplication {
 
     @RequestMapping(
             path = "/rent",
-            method = RequestMethod.GET,
+            method = RequestMethod.GET
 //                consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE},
-            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE}
+//            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE}
     )
     public HashMap rent(@RequestParam Optional<Integer> count) throws MalformedURLException {
 

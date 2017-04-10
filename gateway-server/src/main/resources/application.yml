@@ -1,0 +1,2 @@
+zuul:
+  ribbon-isolation-strategy: thread
