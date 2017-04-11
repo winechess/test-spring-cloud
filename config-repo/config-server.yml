@@ -9,4 +9,4 @@ management:
 spring:
   datasource:
     username: dbuser
-    password: '{cipher}FKSAJDFGYOS8F7GLHAKERGFHLSAJ'
+    password: '{cipher}88e58fcb7ba24ef4088b951d4f447e6344a2121de47495e23aef865230af8c84'

@@ -4,6 +4,8 @@ services:
 
   config-server:
     image: config-server
+    volumes:
+      - /root:/root
     ports:
       - 8888:8888
     restart: always
