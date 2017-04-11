@@ -5,4 +5,5 @@ include 'group-service'
 include 'user-service'
 include 'test-service'
 include 'gateway-server'
+include 'config-server'
 //## end includes ######

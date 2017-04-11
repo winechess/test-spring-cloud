@@ -2,15 +2,20 @@ version: "3"
 
 services:
 
-  consul-server:
-    image: consul
-    container_name: consul-server
+  config-server:
+    build: config-server
     ports:
-        - "8400"
-        - "8500:8500"
-        - "8600/udp"
-    command: "agent -server -bootstrap -client=0.0.0.0 -ui"
+      - 8888:8888
 
+#  consul-server:
+#    image: consul
+#    container_name: consul-server
+#    ports:
+#        - "8400"
+#        - "8500:8500"
+#        - "8600/udp"
+#    command: "agent -server -bootstrap -client=0.0.0.0 -ui"
+#
 #  registrator:
 #    image: gliderlabs/registrator
 #    container_name: registrator
@@ -18,38 +23,38 @@ services:
 #      - "/var/run/docker.sock:/tmp/docker.sock"
 #    command: "consul://consul-server:8500"
 #    restart: always
-
-  rabbitmq:
-    image: rabbitmq:3-management
-    ports:
-      - 5672
-    restart: always
-
-  gateway-server:
-    image: gateway-server
-    container_name: gateway-server
-    ports:
-      - "9000:8080"
-    depends_on:
-      - "consul-server"
-
-  user-service:
-    image: user-service
-    ports:
-      - "8080"
-    depends_on:
-      - "consul-server"
-
-  group-service:
-    image: group-service
-    ports:
-      - "8080"
-    depends_on:
-      - "consul-server"
-
-  test-service:
-    image: test-service
-    ports:
-      - "8080"
-    depends_on:
-      - "consul-server"
+#
+#  rabbitmq:
+#    image: rabbitmq:3-management
+#    ports:
+#      - 5672
+#    restart: always
+#
+#  gateway-server:
+#    image: gateway-server
+#    container_name: gateway-server
+#    ports:
+#      - "9000:8080"
+#    depends_on:
+#      - "consul-server"
+#
+#  user-service:
+#    image: user-service
+#    ports:
+#      - "8080"
+#    depends_on:
+#      - "consul-server"
+#
+#  group-service:
+#    image: group-service
+#    ports:
+#      - "8080"
+#    depends_on:
+#      - "consul-server"
+#
+#  test-service:
+#    image: test-service
+#    ports:
+#      - "8080"
+#    depends_on:
+#      - "consul-server"
