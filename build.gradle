@@ -15,7 +15,6 @@ version = "0.0.1"
 
 allprojects {
 
-    apply plugin: 'java'
     apply plugin: 'idea'
     apply plugin: 'org.springframework.boot'
 
@@ -49,6 +48,8 @@ allprojects {
 }
 
 subprojects {
+
+    apply plugin: 'java'
 
     jar {
         archiveName = project.name + ".jar"

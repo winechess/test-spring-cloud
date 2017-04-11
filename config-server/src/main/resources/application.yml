@@ -12,7 +12,11 @@ management:
   security:
     enabled: false
 encrypt:
-  key: TEST
+  keyStore:
+    location: classpath:/server.jks
+    password: f865230af8c84
+    alias: config-server
+    secret: f865230af8c84
 security:
   basic:
     enabled: false
