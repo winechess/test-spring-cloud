@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/user/project/config-server
+          uri: https://github.com/winechess/config-repo
 server:
   port: 8888
 management:
