@@ -1,5 +1,12 @@
 server:
   port: 8888
+security:
+  user:
+    password: test
 management:
   security:
     enabled: false
+spring:
+  datasource:
+    username: dbuser
+    password: '{cipher}FKSAJDFGYOS8F7GLHAKERGFHLSAJ'
