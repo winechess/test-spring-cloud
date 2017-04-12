@@ -1,2 +1,25 @@
 logging:
   level: debug
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+management:
+  security:
+    enabled: false
+
+spring:
+  rabbitmq:
+    host: rabbitmq

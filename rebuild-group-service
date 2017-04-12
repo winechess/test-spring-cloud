@@ -1,4 +1,0 @@
-#!/bin/bash
-
-./gradlew group-service:dB
-docker-compose up -d group-service

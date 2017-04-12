@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./gradlew monitoring-server:dB
+docker-compose up -d monitoring-server

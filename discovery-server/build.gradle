@@ -1,0 +1,9 @@
+group = "com.vinichenkosa.realty.discoveryserver"
+version = "0.0.1"
+
+dependencies {
+
+  compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+  compile 'org.springframework.cloud:spring-cloud-starter-config'
+  
+}

@@ -8,9 +8,6 @@ spring:
 #          searchPaths: config-repo
 server:
   port: 8888
-management:
-  security:
-    enabled: false
 encrypt:
   keyStore:
     location: classpath:/server.jks
@@ -18,5 +15,6 @@ encrypt:
     alias: config-server
     secret: f865230af8c84
 security:
-  basic:
-    enabled: false
+  user:
+    name: user
+    password: f865230af8c84

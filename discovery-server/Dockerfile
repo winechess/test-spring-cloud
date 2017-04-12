@@ -1,6 +1,6 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM java:alpine
 VOLUME /tmp
-ADD build/libs/gateway-server.jar app.jar
+ADD build/libs/discovery-server.jar app.jar
 RUN sh -c 'touch /app.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-EXPOSE 4000
+EXPOSE 8761

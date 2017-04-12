@@ -1,9 +1,8 @@
 rootProject.name = "realty"
 
 //## start includes ####
-include 'group-service'
-include 'user-service'
-include 'test-service'
 include 'gateway-server'
 include 'config-server'
+include 'discovery-server'
+include 'monitoring-server'
 //## end includes ######

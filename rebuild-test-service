@@ -1,4 +1,0 @@
-#!/bin/bash
-
-./gradlew test-service:dB
-docker-compose up -d test-service
