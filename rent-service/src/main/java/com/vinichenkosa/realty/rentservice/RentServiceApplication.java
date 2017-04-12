@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @Slf4j
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -28,7 +30,7 @@ public class RentServiceApplication {
 
     @RequestMapping(path = "/rent", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity rent(Integer count){
-        logServiceClient.log(count);
+        logServiceClient.log(LogServiceClient.LogRequest.builder().date(new Date()).message("Rent "+count+" properties.").build());
         return ResponseEntity.ok("OK");
     }
 
