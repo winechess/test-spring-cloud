@@ -37,4 +37,14 @@ services:
       - 9000:8989
       - 8080:8080
 
+  rent-service:
+    image: rent-service
+    restart: always
+    ports:
+      - 8080
+  log-service:
+    image: log-service
+    restart: always
+    ports:
+      - 8080
 ### end includes ######

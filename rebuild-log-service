@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./gradlew log-service:dB
+docker-compose up -d log-service
