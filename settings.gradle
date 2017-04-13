@@ -7,4 +7,5 @@ include 'discovery-server'
 include 'monitoring-server'
 include 'rent-service'
 include 'log-service'
+include 'buy-service'
 //## end includes ######

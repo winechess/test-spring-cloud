@@ -1,4 +1,4 @@
-package com.vinichekosa.realty.logservice;
+package com.vinichenkosa.realty.logservice;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

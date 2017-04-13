@@ -6,7 +6,7 @@ services:
     image: rabbitmq:3-management-alpine
     restart: always
     ports:
-      - 5672
+      - 5672:5672
 
 ### start includes ####
 
@@ -17,34 +17,86 @@ services:
       - 8888:8888
     volumes:
       - /root:/root
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
 
   discovery-server:
     image: discovery-server
     restart: always
+    depends_on:
+      - config-server
     ports:
       - 8761:8761
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
 
   gateway-server:
     image: gateway-server
     restart: always
+    depends_on:
+      - discovery-server
     ports:
       - 80:4000
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
 
   monitoring-server:
     image: monitoring-server
     restart: always
+    depends_on:
+      - gateway-server
+      - rabbitmq
     ports:
-      - 9000:8989
-      - 8080:8080
+      - 9000:8080
+      - 8989:8989
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
 
   rent-service:
     image: rent-service
     restart: always
+    depends_on:
+      - gateway-server
+      - rabbitmq
     ports:
       - 8080
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
   log-service:
     image: log-service
     restart: always
+    depends_on:
+      - gateway-server
+      - rabbitmq
     ports:
       - 8080
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+  buy-service:
+    image: buy-service
+    restart: always
+    depends_on:
+      - gateway-server
+      - rabbitmq
+    ports:
+        - 8080
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
+
 ### end includes ######

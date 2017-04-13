@@ -1,5 +1,10 @@
 logging:
-  level: debug
+  level:
+    ROOT: INFO
+
+feign:
+  hystrix:
+    enabled: true
 
 eureka:
   instance:
@@ -13,6 +18,7 @@ hystrix:
     default:
       execution:
         isolation:
+          strategy: THREAD
           thread:
             timeoutInMilliseconds: 10000
 

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./gradlew buy-service:dB
+docker-compose up -d buy-service
