@@ -1,5 +1,5 @@
-server:
-  port: 4000
+#server:
+#  port: 4000
 
 zuul:
   ribbon-isolation-strategy: thread
@@ -21,8 +21,8 @@ ribbon:
   ConnectTimeout: 20000
 server:
   ssl:
-    key-store: server.jks
-    key-store-password: f865230af8c84
-    keyStoreType: jks
-    keyAlias: config-server
-    key-password: f865230af8c84
+    enabled: true
+    key-store: classpath:/server.jks
+    key-store-password: password
+    key-password: password
+    keyAlias: tomcat

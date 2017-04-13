@@ -40,7 +40,7 @@ services:
     depends_on:
       - discovery-server
     ports:
-      - 80:4000
+      - 443:8080
     logging:
       options:
         max-size: "10m"
