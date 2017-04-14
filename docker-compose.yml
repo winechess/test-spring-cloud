@@ -28,7 +28,7 @@ services:
 #    depends_on:
 #      - config-server
     ports:
-      - 8761:8761
+      - 8761:8080
     logging:
       options:
         max-size: "10m"
