@@ -25,8 +25,8 @@ services:
   discovery-server:
     image: discovery-server
     restart: always
-    depends_on:
-      - config-server
+#    depends_on:
+#      - config-server
     ports:
       - 8761:8761
     logging:
@@ -37,10 +37,11 @@ services:
   gateway-server:
     image: gateway-server
     restart: always
-    depends_on:
-      - discovery-server
+#    depends_on:
+#      - discovery-server
     ports:
-      - 443:8080
+      - 443:8443
+      - 80:8080
     logging:
       options:
         max-size: "10m"
@@ -49,9 +50,9 @@ services:
   monitoring-server:
     image: monitoring-server
     restart: always
-    depends_on:
-      - gateway-server
-      - rabbitmq
+#    depends_on:
+#      - gateway-server
+#      - rabbitmq
     ports:
       - 9000:8080
       - 8989:8989
@@ -63,9 +64,9 @@ services:
   rent-service:
     image: rent-service
     restart: always
-    depends_on:
-      - gateway-server
-      - rabbitmq
+#    depends_on:
+#      - gateway-server
+#      - rabbitmq
     ports:
       - 8080
     logging:
@@ -76,9 +77,9 @@ services:
   log-service:
     image: log-service
     restart: always
-    depends_on:
-      - gateway-server
-      - rabbitmq
+#    depends_on:
+#      - gateway-server
+#      - rabbitmq
     ports:
       - 8080
     logging:
@@ -89,9 +90,9 @@ services:
   buy-service:
     image: buy-service
     restart: always
-    depends_on:
-      - gateway-server
-      - rabbitmq
+#    depends_on:
+#      - gateway-server
+#      - rabbitmq
     ports:
         - 8080
     logging:

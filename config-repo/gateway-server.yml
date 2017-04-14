@@ -1,6 +1,3 @@
-#server:
-#  port: 4000
-
 zuul:
   ribbon-isolation-strategy: thread
   host:
@@ -19,7 +16,9 @@ hystrix:
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
+
 server:
+  port: 8443
   ssl:
     enabled: true
     key-store: classpath:/server.jks
